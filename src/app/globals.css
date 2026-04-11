@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "SF Pro Text",
+    "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+:root {
+  --bg: #fafaf9;
+  --fg: #18181b;
+  --muted: #71717a;
+  --border: #e4e4e7;
+  --accent: #18181b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --fg: #fafafa;
+    --muted: #a1a1aa;
+    --border: #27272a;
+    --accent: #fafafa;
+  }
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.prose-content {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--fg);
+}
+.prose-content > * + * {
+  margin-top: 1.25em;
+}
+.prose-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.5em;
+  margin-bottom: 0.6em;
+}
+.prose-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.prose-content p {
+  color: var(--fg);
+}
+.prose-content a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.prose-content a:hover {
+  text-decoration-color: var(--fg);
+}
+.prose-content blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1.25em;
+  color: var(--muted);
+  font-style: italic;
+}
+.prose-content code {
+  background: color-mix(in srgb, var(--border) 60%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+.prose-content pre {
+  background: color-mix(in srgb, var(--border) 40%, transparent);
+  padding: 1.1em 1.25em;
+  border-radius: 0.6em;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.prose-content pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose-content ul,
+.prose-content ol {
+  padding-left: 1.4em;
+}
+.prose-content ul {
+  list-style: disc;
+}
+.prose-content ol {
+  list-style: decimal;
+}
+.prose-content li + li {
+  margin-top: 0.4em;
+}
+.prose-content img {
+  border-radius: 0.6em;
+  margin: 2em 0;
+}
+.prose-content hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3em 0;
+}
