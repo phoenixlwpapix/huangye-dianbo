@@ -28,7 +28,7 @@ export default function Home() {
         {posts.length === 0 && (
           <p className="text-[var(--muted)]">还没有文章，先喝杯茶。</p>
         )}
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <article key={post.slug} className="group">
             <Link href={`/posts/${post.slug}`} className="block">
               {post.cover && (
@@ -39,6 +39,7 @@ export default function Home() {
                     fill
                     sizes="(max-width: 768px) 100vw, 768px"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    {...(index === 0 && { priority: true })}
                   />
                 </div>
               )}

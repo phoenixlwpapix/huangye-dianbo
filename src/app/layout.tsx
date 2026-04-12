@@ -34,6 +34,7 @@ export default function RootLayout({
                 width={28}
                 height={28}
                 className="dark:invert"
+                priority
               />
               <span className="text-base font-semibold tracking-tight">
                 荒野电波
