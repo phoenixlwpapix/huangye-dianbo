@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
     template: "%s · 荒野电波",
   },
   description: "阿荒的博客 —— 记录想法、作品与过程。",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -22,9 +26,18 @@ export default function RootLayout({
           <div className="mx-auto max-w-3xl px-6 h-16 flex items-center justify-between">
             <Link
               href="/"
-              className="text-sm font-medium tracking-tight hover:opacity-70 transition-opacity"
+              className="flex items-center gap-2 hover:opacity-70 transition-opacity"
             >
-              荒野电波
+              <Image
+                src="/logo.png"
+                alt="荒野电波"
+                width={28}
+                height={28}
+                className="dark:invert"
+              />
+              <span className="text-base font-semibold tracking-tight">
+                荒野电波
+              </span>
             </Link>
             <nav className="flex items-center gap-6 text-sm text-[var(--muted)]">
               <Link href="/" className="hover:text-[var(--fg)] transition-colors">
