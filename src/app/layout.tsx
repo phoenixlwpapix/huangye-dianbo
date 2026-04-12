@@ -31,7 +31,7 @@ export default function RootLayout({
                 文章
               </Link>
               <a
-                href="https://studioyyh.tech"
+                href="https://www.studioyyh.tech"
                 className="hover:text-[var(--fg)] transition-colors"
               >
                 主页 ↗
