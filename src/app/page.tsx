@@ -16,11 +16,14 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
       <section className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
           荒野电波
         </h1>
+        <p className="text-sm md:text-base font-medium tracking-[0.25em] text-[var(--muted)] mb-4">
+          WILD WAVES
+        </p>
         <p className="text-[var(--muted)] text-lg leading-relaxed max-w-xl">
-          阿荒写的长文。记录想法、作品与过程。
+          在 AI 重塑一切的时代，一个普通人的思考、观察与实验。
         </p>
       </section>
 

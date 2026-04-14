@@ -36,8 +36,13 @@ export default function RootLayout({
                 className="dark:invert"
                 priority
               />
-              <span className="text-base font-semibold tracking-tight">
-                荒野电波
+              <span className="flex items-baseline gap-2">
+                <span className="text-base font-semibold tracking-tight">
+                  荒野电波
+                </span>
+                <span className="text-[10px] font-medium tracking-[0.2em] text-[var(--muted)]">
+                  WILD WAVES
+                </span>
               </span>
             </Link>
             <nav className="flex items-center gap-6 text-sm text-[var(--muted)]">
