@@ -35,7 +35,7 @@ export default function Home() {
           <article key={post.slug} className="group">
             <Link href={`/posts/${post.slug}`} className="block">
               {post.cover && (
-                <div className="relative aspect-[16/9] mb-5 overflow-hidden rounded-xl bg-[var(--border)]">
+                <div className="relative aspect-[2.35/1] mb-5 overflow-hidden rounded-xl bg-[var(--border)]">
                   <Image
                     src={post.cover}
                     alt={post.title}

@@ -58,7 +58,7 @@ export default async function PostPage({
       </header>
 
       {post.cover && (
-        <div className="relative aspect-[16/9] mb-12 overflow-hidden rounded-xl bg-[var(--border)]">
+        <div className="relative aspect-[2.35/1] mb-12 overflow-hidden rounded-xl bg-[var(--border)]">
           <Image
             src={post.cover}
             alt={post.title}
