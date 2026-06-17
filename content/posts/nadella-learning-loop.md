@@ -5,8 +5,6 @@ excerpt: "微软CEO Satya Nadella 发了一篇长文，提出了一个让所有�
 cover: "/images/nadella-learning-loop-cover.png"
 ---
 
-![](/images/nadella-learning-loop-cover.png)
-
 前几天刷 X，看到 Satya Nadella 发了一篇长文。
 
 不是 CEO 惯常的那种公关稿，不是「我对 AI 的未来充满信心」之类的正确废话。是真的在想事情，能感觉到字里行间有一个活人在使劲。
