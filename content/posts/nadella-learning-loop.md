@@ -9,7 +9,7 @@ cover: "/images/nadella-learning-loop-cover.png"
 
 不是 CEO 惯常的那种公关稿，不是「我对 AI 的未来充满信心」之类的正确废话。是真的在想事情，能感觉到字里行间有一个活人在使劲。
 
-标题叫「A frontier without an ecosystem is not stable」。没有生态系统支撑的前沿模型，是不稳定的。
+标题叫「A frontier without an ecosystem is not stable」。没有生态系统支撑的技术前沿，是不稳定的。
 
 6200 万阅读，3.9 万赞，7600 多次转发。
 
