@@ -5,8 +5,6 @@ excerpt: "AI 时代最不容易过期的能力，不是追下一个工具，而�
 cover: "/images/read-human-nature-cover.png"
 ---
 
-![](/images/read-human-nature-cover.png)
-
 事情是这样的。
 
 这两天我又被一个问题追着跑。
