@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Eye } from "lucide-react";
 import { getAllPosts } from "@/lib/posts";
+import { getCachedViewCounts } from "@/lib/views";
+
+export const revalidate = 60;
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("zh-CN", {
@@ -10,8 +14,9 @@ function formatDate(iso: string) {
   });
 }
 
-export default function Home() {
+export default async function Home() {
   const posts = getAllPosts();
+  const viewCounts = await getCachedViewCounts(posts.map((post) => post.slug));
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
@@ -50,6 +55,11 @@ export default function Home() {
                 <time>{formatDate(post.date)}</time>
                 <span>·</span>
                 <span>{post.readingTime}</span>
+                <span>·</span>
+                <span className="inline-flex items-center gap-1.5 tabular-nums">
+                  <Eye className="size-3.5" aria-hidden="true" />
+                  {(viewCounts[post.slug] ?? 0).toLocaleString("zh-CN")} 次阅读
+                </span>
               </div>
               <h2 className="text-2xl font-semibold tracking-tight mb-2 group-hover:opacity-70 transition-opacity">
                 {post.title}

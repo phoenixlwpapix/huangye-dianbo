@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { getAllPosts, getPost } from "@/lib/posts";
+import { ArticleViewCount } from "@/components/article-view-count";
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -51,6 +52,8 @@ export default async function PostPage({
           <time>{formatDate(post.date)}</time>
           <span>·</span>
           <span>{post.readingTime}</span>
+          <span>·</span>
+          <ArticleViewCount slug={slug} />
         </div>
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
           {post.title}

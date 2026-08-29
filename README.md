@@ -8,7 +8,16 @@
 - TypeScript + React 19
 - Tailwind CSS v4
 - gray-matter + remark (markdown)
+- Upstash Redis（文章阅读量，24 小时访客去重）
 - Vercel 托管，git push 自动部署
+
+## 阅读量统计
+
+- 主页显示每篇文章的累计阅读量，最多缓存 60 秒。
+- 文章页打开后异步记录一次阅读，不阻塞正文渲染。
+- 同一访客对同一篇文章在 24 小时内只计数一次；常见爬虫不计数。
+- Vercel 项目需连接 Upstash Redis，并提供 `KV_REST_API_URL` 和
+  `KV_REST_API_TOKEN` 环境变量。
 
 ## 发文章
 
