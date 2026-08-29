@@ -27,6 +27,8 @@ cover: "/images/cover.png"
 
 封面图和配图放 `public/images/`。
 
+最近发布： [AI 不是又一次工业革命，它更像普通人的文艺复兴](https://blog.studioyyh.tech/posts/ai-renaissance)
+
 ```bash
 git add . && git commit -m "post: 文章标题" && git push
 ```
